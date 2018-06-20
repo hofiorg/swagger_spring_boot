@@ -8,4 +8,8 @@
 
 start `Swagger2SpringBoot` Run configuration 
 
-open documentation at `http://localhost:8080/v2/swagger-ui.html`
+open the documentation at `http://localhost:8080/v2/swagger-ui.html`
+
+# test
+
+run junit test `UserApiControllerTest`
