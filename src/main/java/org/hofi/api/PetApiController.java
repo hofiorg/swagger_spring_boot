@@ -1,18 +1,14 @@
 package org.hofi.api;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.ApiParam;
 import org.hofi.model.ModelApiResponse;
 import org.hofi.model.Pet;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.List;
@@ -20,16 +16,7 @@ import java.util.List;
 @Controller
 public class PetApiController implements PetApi {
 
-  private static final Logger log = LoggerFactory.getLogger(PetApiController.class);
-
-  private final ObjectMapper objectMapper;
-
-  private final HttpServletRequest request;
-
-  @org.springframework.beans.factory.annotation.Autowired
-  public PetApiController(ObjectMapper objectMapper, HttpServletRequest request) {
-    this.objectMapper = objectMapper;
-    this.request = request;
+  public PetApiController() {
   }
 
   public ResponseEntity<Void> addPet(@ApiParam(value = "Pet object that needs to be added to the store", required = true) @Valid @RequestBody Pet body) {

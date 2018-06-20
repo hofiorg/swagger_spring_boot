@@ -3,7 +3,6 @@ package org.hofi.api;
 import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import com.google.gson.Gson;
 import org.hofi.model.HelloWorld;
-import org.hofi.model.Pet;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,10 +10,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
 
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -39,9 +36,11 @@ public class UserApiControllerTest {
 
     HelloWorld helloWorld = new HelloWorld();
     helloWorld.setMessage("HELLO WORLD");
+    String json = gson.toJson(helloWorld);
+    log.info("Json: " + json);
 
     this.mvc.perform(get("/user/login?username=user&password=123"))
           .andExpect(status().isOk())
-          .andExpect(content().string(gson.toJson(helloWorld)));
+          .andExpect(content().string(json));
   }
 }
