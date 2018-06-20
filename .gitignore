@@ -1,0 +1,5 @@
+.idea/**
+*.iml
+!/.idea/runConfigurations/Swagger2SpringBoot.xml
+!/.idea/runConfigurations/UserApiControllerTest.xml
+!/.idea/runConfigurations/
