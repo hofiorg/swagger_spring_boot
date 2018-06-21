@@ -10,7 +10,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-@ComponentScan(basePackages = { "org.hofi", "org.hofi.api" })
+@ComponentScan(basePackages = { "org.hofi", "org.hofi.api", "io.swagger.configuration" })
 public class Swagger2SpringBoot implements CommandLineRunner {
 
     @Override

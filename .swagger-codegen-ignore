@@ -25,6 +25,8 @@
 pom.xml
 README.md
 
+**/Swagger2SpringBoot.java
+
 **/UserApiController.java
 **/PetApiController.java
 **/StoreApiController.java
