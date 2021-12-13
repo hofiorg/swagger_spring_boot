@@ -1,4 +1,4 @@
-# swagger_spring_boot [![Build Status](https://travis-ci.org/hofiorg/swagger_spring_boot.svg?branch=master)](https://travis-ci.org/hofiorg/swagger_spring_boot)
+# swagger_spring_boot ![maven workflow](https://github.com/hofiorg/swagger_spring_boot/actions/workflows/maven.yml/badge.svg)
 
 Example with WireMock and Spring RestTemplate
 
