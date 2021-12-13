@@ -1,4 +1,4 @@
-# swagger_spring_boot ![maven workflow](https://github.com/hofiorg/swagger_spring_boot/actions/workflows/maven.yml/badge.svg)
+# swagger_spring_boot &middot; ![maven workflow](https://github.com/hofiorg/swagger_spring_boot/actions/workflows/maven.yml/badge.svg)
 
 Example with WireMock and Spring RestTemplate
 
